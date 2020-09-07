@@ -1,3 +1,10 @@
+/**
+ * Title: app.component.ts
+ * Author: Emily Richter
+ * Date: 6 September 2020
+ * Description: App Component
+ */
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +13,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bobs-computer-repair';
+  title = "Bob's Computer Repair";
 }

@@ -1,0 +1,26 @@
+<mat-card class="mat-elevation-z3">
+  <mat-card-title>Invoice</mat-card-title>
+  <br />
+
+  <mat-card-content>
+    <div fxLayout="column">
+
+      <p>Date: {{ invoice.orderDate }}</p>
+
+      <ul style="list-style: none;">
+        <li *ngFor="let service of invoice.lineitems">
+          {{ service.title }}: {{ service.price | currency }}
+        </li>
+        <li>Parts Amount: {{ invoice.partsAmount | currency }}</li>
+        <li>Labor Amount: {{ invoice.laborAmount | currency }}</li>
+      </ul>
+
+      <p style="margin-top: 15px;">Total: {{ total | currency }}</p>
+
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions align="end">
+    <button mat-raised-button color="accent" matDialogClose="confirm">OK</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,3 +1,10 @@
+/**
+ * Title: main.ts
+ * Author: Emily Richter
+ * Date: 6 September 2020
+ * Description: main
+ */
+
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 

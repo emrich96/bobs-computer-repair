@@ -1,0 +1,36 @@
+<form fxLayout="column" [formGroup]="serviceRepairForm" (ngSubmit)="onSubmit($event)">
+
+  <h2>Services</h2>
+
+  <div fxFlex formArrayName="serviceRepairOptions" *ngFor="let service of serviceRepairForm.controls.serviceRepairOptions['controls']; let i = index">
+    <mat-checkbox formControlName="{{i}}">
+      {{ services[i].title }} {{ services[i].price | currency }}
+    </mat-checkbox>
+    <br />
+  </div>
+
+  <h2 style="padding-top: 20px;">Standard Fees</h2>
+
+  <div fxFlex>
+
+    <mat-form-field class="textInput" appearance="fill">
+
+      <mat-label>Parts</mat-label>
+      <input formControlName="parts" matInput currencyMask [options]="{ align: 'left' }">
+      <mat-error>You must enter a value</mat-error>
+
+    </mat-form-field>
+
+    <mat-form-field class="textInput" appearance="fill">
+
+      <mat-label>Labor</mat-label>
+      <input formControlName="labor" matInput currencyMask [options]="{ align: 'left' }">
+      <mat-error>You must enter a value</mat-error>
+
+    </mat-form-field>
+  </div>
+
+
+  <button mat-raised-button color="accent" type="submit" [disabled]="!serviceRepairForm.valid" style="width: 10em;">Calculate</button>
+
+</form>

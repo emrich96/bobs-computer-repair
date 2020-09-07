@@ -1,5 +1,5 @@
 
-// Custom Theming for Angular Material
+// Custom Theme for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
@@ -12,8 +12,8 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$bobs-computer-repair-primary: mat-palette($mat-indigo);
-$bobs-computer-repair-accent: mat-palette($mat-pink, A200, A100, A400);
+$bobs-computer-repair-primary: mat-palette($mat-blue-grey, 600);
+$bobs-computer-repair-accent: mat-palette($mat-amber, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $bobs-computer-repair-warn: mat-palette($mat-red);
